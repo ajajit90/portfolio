@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="clay" data-font="playfair">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Ajit Kumar — Marketing Communications leader. 12+ years across BFSI, EdTech, Consumer. CMO Asia Gold Award winner."/>
+<title>Ajit Kumar — Marketing Communications</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&family=Fraunces:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Mulish:wght@300;400;500&family=Bodoni+Moda:ital,wght@0,400;0,600;1,400&family=Syne:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+[data-theme="clay"]{--bg:#f7f3ee;--bg2:#efe9e0;--surface:#faf7f4;--ink:#2a2018;--ink2:#7a6a58;--ink3:#b5a898;--accent:#c0531e;--accent2:#e8a882;--rule:#ddd5c8;--nav-bg:rgba(247,243,238,0.93);}
+[data-theme="slate"]{--bg:#f2f4f7;--bg2:#e4e8ef;--surface:#f8f9fb;--ink:#18202e;--ink2:#5a6478;--ink3:#9aa3b2;--accent:#2d5be3;--accent2:#93b0f5;--rule:#cdd3de;--nav-bg:rgba(242,244,247,0.93);}
+[data-theme="sage"]{--bg:#f2f5f0;--bg2:#e3ead8;--surface:#f8faf6;--ink:#1c2419;--ink2:#5a6e54;--ink3:#98aa90;--accent:#3a7a42;--accent2:#8fc495;--rule:#ccd8c6;--nav-bg:rgba(242,245,240,0.93);}
+[data-theme="noir"]{--bg:#141414;--bg2:#1e1e1e;--surface:#1a1a1a;--ink:#f0ede8;--ink2:#9e9a92;--ink3:#5a5750;--accent:#e8c068;--accent2:#a07a28;--rule:#2e2e2e;--nav-bg:rgba(20,20,20,0.95);}
+[data-theme="rose"]{--bg:#f9f2f4;--bg2:#f0e4e8;--surface:#fdf8f9;--ink:#2a1820;--ink2:#7a5060;--ink3:#b89aa4;--accent:#b83060;--accent2:#e890b0;--rule:#ddc8d0;--nav-bg:rgba(249,242,244,0.93);}
+
+[data-font="playfair"]   {--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',sans-serif;}
+[data-font="cormorant"]  {--serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',sans-serif;}
+[data-font="fraunces"]   {--serif:'Fraunces',Georgia,serif;--sans:'Outfit',sans-serif;}
+[data-font="baskerville"]{--serif:'Libre Baskerville',Georgia,serif;--sans:'Mulish',sans-serif;}
+[data-font="bodoni"]     {--serif:'Bodoni Moda',Georgia,serif;--sans:'Syne',sans-serif;}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased;transition:background 0.3s,color 0.3s;}
+
+nav{position:sticky;top:0;z-index:300;background:var(--nav-bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule);padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;height:58px;}
+.nav-logo{font-family:var(--serif);font-size:19px;font-weight:400;color:var(--ink);text-decoration:none;}
+.nav-right{display:flex;align-items:center;gap:2rem;}
+.nav-links{display:flex;gap:1.75rem;list-style:none;}
+.nav-links a{font-size:12px;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink2);text-decoration:none;transition:color 0.15s;}
+.nav-links a:hover{color:var(--ink);}
+.customise-btn{font-size:12px;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);background:none;border:1px solid var(--accent);padding:5px 12px;cursor:pointer;border-radius:2px;transition:background 0.15s,color 0.15s;white-space:nowrap;}
+.customise-btn:hover{background:var(--accent);color:var(--bg);}
+
+.panel-backdrop{display:none;position:fixed;inset:0;z-index:400;background:rgba(0,0,0,0.35);}
+.panel-backdrop.open{display:block;}
+.customise-panel{position:fixed;top:0;right:-340px;width:320px;height:100vh;z-index:500;background:var(--surface);border-left:1px solid var(--rule);padding:2rem 1.75rem;overflow-y:auto;transition:right 0.3s cubic-bezier(.4,0,.2,1);}
+.customise-panel.open{right:0;}
+.panel-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem;}
+.panel-title{font-family:var(--serif);font-size:1.2rem;font-weight:400;color:var(--ink);}
+.panel-close{background:none;border:none;cursor:pointer;font-size:22px;color:var(--ink2);line-height:1;}
+.panel-section-label{font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink3);margin-bottom:0.75rem;margin-top:1.5rem;}
+.panel-section-label:first-of-type{margin-top:0;}
+.theme-swatches{display:flex;gap:10px;flex-wrap:wrap;}
+.swatch{width:40px;height:40px;border-radius:50%;cursor:pointer;border:2px solid transparent;transition:border-color 0.15s,transform 0.1s;}
+.swatch:hover{transform:scale(1.1);}
+.swatch.active{border-color:var(--ink);}
+.swatch[data-t="clay"]{background:#c0531e;}
+.swatch[data-t="slate"]{background:#2d5be3;}
+.swatch[data-t="sage"]{background:#3a7a42;}
+.swatch[data-t="noir"]{background:#e8c068;border:2px solid #444;}
+.swatch[data-t="rose"]{background:#b83060;}
+.font-options{display:flex;flex-direction:column;gap:8px;}
+.font-option{padding:10px 14px;border:1px solid var(--rule);background:var(--bg2);cursor:pointer;transition:border-color 0.15s,background 0.15s;border-radius:3px;}
+.font-option:hover{border-color:var(--accent);}
+.font-option.active{border-color:var(--accent);background:var(--bg);}
+.font-option-name{font-size:16px;color:var(--ink);line-height:1.2;margin-bottom:2px;}
+.font-option-label{font-size:11px;color:var(--ink3);}
+
+.hero{max-width:960px;margin:0 auto;padding:6.5rem 2.5rem 4.5rem;border-bottom:1px solid var(--rule);}
+.hero-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:1.75rem;}
+.hero-tag{font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);}
+.hero-dot{width:4px;height:4px;border-radius:50%;background:var(--accent2);flex-shrink:0;}
+.hero h1{font-family:var(--serif);font-size:clamp(2.8rem,6.5vw,4.5rem);font-weight:400;line-height:1.08;letter-spacing:-0.5px;color:var(--ink);margin-bottom:1.75rem;max-width:720px;}
+.hero h1 em{font-style:italic;color:var(--ink2);}
+.hero-sub{font-size:16px;color:var(--ink2);max-width:540px;line-height:1.75;margin-bottom:3rem;}
+.hero-meta{display:flex;gap:3rem;flex-wrap:wrap;}
+.hero-meta-item{display:flex;flex-direction:column;gap:4px;}
+.hero-meta-label{font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);}
+.hero-meta-value{font-size:14px;color:var(--ink);}
+.badge{display:inline-flex;align-items:center;gap:5px;background:var(--bg2);border:1px solid var(--rule);font-size:12px;color:var(--accent);padding:3px 10px;border-radius:2px;}
+
+.section{max-width:960px;margin:0 auto;padding:4.5rem 2.5rem;border-bottom:1px solid var(--rule);}
+.section-header{display:flex;align-items:baseline;gap:1rem;margin-bottom:2.5rem;}
+.section-title{font-family:var(--serif);font-size:1.7rem;font-weight:400;letter-spacing:-0.2px;color:var(--ink);}
+.section-meta{font-size:12px;color:var(--ink3);}
+
+.filter-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:2rem;}
+.filter-btn{font-size:12px;font-weight:400;letter-spacing:0.06em;padding:6px 14px;border:1px solid var(--rule);background:var(--surface);color:var(--ink2);cursor:pointer;border-radius:2px;transition:all 0.15s;}
+.filter-btn:hover{border-color:var(--accent);color:var(--accent);}
+.filter-btn.active{background:var(--accent);color:var(--bg);border-color:var(--accent);}
+
+.work-grid{columns:3;column-gap:1.5rem;}
+@media(max-width:800px){.work-grid{columns:2;}}
+@media(max-width:500px){.work-grid{columns:1;}}
+
+.work-item{break-inside:avoid;margin-bottom:1.5rem;position:relative;cursor:pointer;overflow:hidden;border:1px solid var(--rule);background:var(--bg2);border-radius:2px;transition:border-color 0.2s;}
+.work-item:hover{border-color:var(--accent);}
+.work-item[data-hidden="true"]{display:none;}
+.work-media{width:100%;display:block;position:relative;overflow:hidden;}
+.work-media img{width:100%;height:auto;display:block;transition:transform 0.4s ease;}
+.work-item:hover .work-media img{transform:scale(1.03);}
+.work-media-placeholder{width:100%;aspect-ratio:16/9;background:var(--bg2);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;}
+.play-icon{width:44px;height:44px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.play-icon svg{margin-left:3px;}
+.media-type-badge{position:absolute;top:10px;right:10px;font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;background:var(--ink);color:var(--bg);padding:3px 8px;border-radius:2px;opacity:0.82;}
+.work-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.6) 0%,transparent 55%);opacity:0;transition:opacity 0.25s;display:flex;align-items:flex-end;padding:1rem;}
+.work-item:hover .work-overlay{opacity:1;}
+.work-overlay-text{font-size:12px;color:#fff;font-weight:400;letter-spacing:0.06em;}
+.work-footer{padding:0.9rem 1rem;border-top:1px solid var(--rule);}
+.work-brand{font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:3px;}
+.work-title{font-family:var(--serif);font-size:1rem;font-weight:400;color:var(--ink);line-height:1.3;margin-bottom:6px;}
+.work-tags{display:flex;gap:5px;flex-wrap:wrap;}
+.tag{font-size:10px;padding:2px 8px;border:1px solid var(--rule);border-radius:100px;color:var(--ink2);background:var(--surface);}
+
+.work-add-card{break-inside:avoid;margin-bottom:1.5rem;border:2px dashed var(--rule);border-radius:2px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;cursor:pointer;color:var(--ink3);transition:border-color 0.2s,color 0.2s;background:none;width:100%;}
+.work-add-card:hover{border-color:var(--accent);color:var(--accent);}
+.add-icon{font-size:28px;line-height:1;}
+.add-label{font-size:12px;letter-spacing:0.08em;}
+
+.lightbox{display:none;position:fixed;inset:0;z-index:600;background:rgba(0,0,0,0.92);align-items:center;justify-content:center;padding:2rem;flex-direction:column;gap:1.5rem;}
+.lightbox.open{display:flex;}
+.lightbox-media{max-width:880px;width:100%;max-height:70vh;display:flex;align-items:center;justify-content:center;}
+.lightbox-media img{max-width:100%;max-height:70vh;object-fit:contain;border:1px solid rgba(255,255,255,0.08);}
+.lightbox-media iframe{width:100%;aspect-ratio:16/9;border:none;}
+.lightbox-info{max-width:880px;width:100%;}
+.lightbox-brand{font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent2);margin-bottom:4px;}
+.lightbox-title{font-family:var(--serif);font-size:1.4rem;font-weight:400;color:#f0ede8;margin-bottom:6px;}
+.lightbox-desc{font-size:13px;color:#9e9a92;line-height:1.6;}
+.lightbox-close{position:fixed;top:1.5rem;right:1.75rem;background:none;border:none;cursor:pointer;font-size:28px;color:rgba(255,255,255,0.55);line-height:1;transition:color 0.15s;}
+.lightbox-close:hover{color:#fff;}
+.lightbox-nav{position:fixed;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.07);border:none;color:rgba(255,255,255,0.65);font-size:22px;width:44px;height:44px;cursor:pointer;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background 0.15s;}
+.lightbox-nav:hover{background:rgba(255,255,255,0.18);}
+.lightbox-prev{left:1rem;}
+.lightbox-next{right:1rem;}
+
+.modal-backdrop{display:none;position:fixed;inset:0;z-index:700;background:rgba(0,0,0,0.5);align-items:center;justify-content:center;padding:2rem;}
+.modal-backdrop.open{display:flex;}
+.modal{background:var(--surface);max-width:560px;width:100%;border:1px solid var(--rule);border-radius:4px;padding:2.25rem;max-height:90vh;overflow-y:auto;}
+.modal-title{font-family:var(--serif);font-size:1.5rem;font-weight:400;color:var(--ink);margin-bottom:1.5rem;}
+.form-group{margin-bottom:1.25rem;}
+.form-label{display:block;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:6px;}
+.form-input,.form-select,.form-textarea{width:100%;padding:9px 12px;border:1px solid var(--rule);background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px;border-radius:2px;outline:none;transition:border-color 0.15s;}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--accent);}
+.form-textarea{min-height:80px;resize:vertical;}
+.form-select option{background:var(--surface);}
+.form-hint{font-size:11px;color:var(--ink3);margin-top:4px;}
+.form-row{display:flex;gap:12px;}
+.form-row .form-group{flex:1;}
+.modal-actions{display:flex;gap:12px;justify-content:flex-end;margin-top:1.75rem;}
+.btn-primary{font-size:13px;padding:9px 20px;background:var(--accent);color:var(--bg);border:none;cursor:pointer;border-radius:2px;font-family:var(--sans);transition:opacity 0.15s;}
+.btn-primary:hover{opacity:0.88;}
+.btn-ghost{font-size:13px;padding:9px 20px;background:none;color:var(--ink2);border:1px solid var(--rule);cursor:pointer;border-radius:2px;font-family:var(--sans);transition:border-color 0.15s;}
+.btn-ghost:hover{border-color:var(--ink2);}
+
+.work-delete{position:absolute;top:8px;left:8px;z-index:10;background:rgba(0,0,0,0.55);color:#fff;border:none;width:26px;height:26px;border-radius:50%;font-size:14px;cursor:pointer;line-height:1;display:none;align-items:center;justify-content:center;}
+.work-item:hover .work-delete{display:flex;}
+
+.expertise-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1px;border:1px solid var(--rule);}
+.expertise-cell{background:var(--surface);padding:1.5rem 1.75rem;}
+.expertise-num{font-family:var(--serif);font-size:2.2rem;font-weight:400;color:var(--rule);line-height:1;margin-bottom:0.6rem;}
+.expertise-label{font-size:14px;font-weight:500;color:var(--ink);margin-bottom:4px;}
+.expertise-desc{font-size:12px;color:var(--ink3);line-height:1.55;}
+
+.timeline{display:flex;flex-direction:column;}
+.timeline-item{display:grid;grid-template-columns:150px 1fr;gap:2rem;padding:1.75rem 0;border-top:1px solid var(--rule);}
+.timeline-item:last-child{border-bottom:1px solid var(--rule);}
+.timeline-year{font-size:12px;color:var(--ink3);padding-top:3px;}
+.timeline-role{font-size:15px;font-weight:500;color:var(--ink);margin-bottom:2px;}
+.timeline-company{font-size:13px;color:var(--ink2);margin-bottom:7px;}
+.timeline-detail{font-size:12px;color:var(--ink3);line-height:1.65;}
+.timeline-award{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:500;color:var(--accent);letter-spacing:0.06em;text-transform:uppercase;margin-top:7px;}
+
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;border:1px solid var(--rule);}
+.edu-cell{background:var(--surface);padding:1.25rem 1.75rem;}
+.edu-degree{font-size:14px;font-weight:500;color:var(--ink);margin-bottom:3px;}
+.edu-school{font-size:13px;color:var(--ink2);}
+
+.contact-block{padding:3.5rem 0 1rem;border-top:1px solid var(--rule);display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:2rem;}
+.contact-heading{font-family:var(--serif);font-size:clamp(2rem,5vw,3.2rem);font-weight:400;color:var(--ink);}
+.contact-links{display:flex;flex-direction:column;gap:10px;align-items:flex-end;}
+.contact-link{font-size:14px;color:var(--ink2);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:2px;transition:color 0.15s,border-color 0.15s;}
+.contact-link:hover{color:var(--accent);border-color:var(--accent);}
+
+footer{max-width:960px;margin:0 auto;padding:1.5rem 2.5rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+footer span{font-size:12px;color:var(--ink3);}
+
+@media(max-width:700px){
+  nav{padding:0 1.25rem;}
+  .nav-links{gap:1.25rem;}
+  .hero,.section{padding-left:1.25rem;padding-right:1.25rem;}
+  .hero{padding-top:3.5rem;}
+  .timeline-item{grid-template-columns:1fr;gap:0.25rem;}
+  .edu-grid{grid-template-columns:1fr;}
+  .contact-block{flex-direction:column;align-items:flex-start;}
+  .contact-links{align-items:flex-start;}
+  footer{padding:1.5rem 1.25rem;}
+  .customise-panel{width:290px;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="#">Ajit Kumar</a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="customise-btn" onclick="togglePanel()">&#9881; Customise</button>
+  </div>
+</nav>
+
+<!-- CUSTOMISE PANEL -->
+<div class="panel-backdrop" id="panelBackdrop" onclick="togglePanel()"></div>
+<div class="customise-panel" id="customisePanel">
+  <div class="panel-header">
+    <span class="panel-title">Customise</span>
+    <button class="panel-close" onclick="togglePanel()">&times;</button>
+  </div>
+  <p class="panel-section-label">Theme colour</p>
+  <div class="theme-swatches">
+    <div class="swatch active" data-t="clay"  title="Clay"  onclick="setTheme('clay')"></div>
+    <div class="swatch"        data-t="slate" title="Slate" onclick="setTheme('slate')"></div>
+    <div class="swatch"        data-t="sage"  title="Sage"  onclick="setTheme('sage')"></div>
+    <div class="swatch"        data-t="noir"  title="Noir"  onclick="setTheme('noir')"></div>
+    <div class="swatch"        data-t="rose"  title="Rose"  onclick="setTheme('rose')"></div>
+  </div>
+  <p class="panel-section-label">Font pair</p>
+  <div class="font-options">
+    <div class="font-option active" data-f="playfair" onclick="setFont('playfair')">
+      <div class="font-option-name" style="font-family:'Playfair Display',serif;">Playfair Display</div>
+      <div class="font-option-label">+ DM Sans — editorial classic</div>
+    </div>
+    <div class="font-option" data-f="cormorant" onclick="setFont('cormorant')">
+      <div class="font-option-name" style="font-family:'Cormorant Garamond',serif;">Cormorant Garamond</div>
+      <div class="font-option-label">+ Jost — refined &amp; literary</div>
+    </div>
+    <div class="font-option" data-f="fraunces" onclick="setFont('fraunces')">
+      <div class="font-option-name" style="font-family:'Fraunces',serif;">Fraunces</div>
+      <div class="font-option-label">+ Outfit — warm &amp; characterful</div>
+    </div>
+    <div class="font-option" data-f="baskerville" onclick="setFont('baskerville')">
+      <div class="font-option-name" style="font-family:'Libre Baskerville',serif;">Libre Baskerville</div>
+      <div class="font-option-label">+ Mulish — traditional &amp; legible</div>
+    </div>
+    <div class="font-option" data-f="bodoni" onclick="setFont('bodoni')">
+      <div class="font-option-name" style="font-family:'Bodoni Moda',serif;">Bodoni Moda</div>
+      <div class="font-option-label">+ Syne — high fashion editorial</div>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">
+    <span class="hero-tag">Head of Marketing Communications</span>
+    <span class="hero-dot"></span>
+    <span class="hero-tag" style="color:var(--ink3);font-weight:300;">12+ years</span>
+  </div>
+  <h1>Brand thinking.<br><em>Campaign results.</em></h1>
+  <p class="hero-sub">Marketing communications leader building brands for Bank of Baroda, Policybazaar, Unilever, and Nickelodeon — through integrated, performance-led storytelling across BFSI, EdTech, and Consumer.</p>
+  <div class="hero-meta">
+    <div class="hero-meta-item">
+      <span class="hero-meta-label">Currently</span>
+      <span class="hero-meta-value">Head MARCOM, Intelegencia</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="hero-meta-label">Based in</span>
+      <span class="hero-meta-value">Greater Noida, India</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="hero-meta-label">Recognition</span>
+      <span class="badge">&#9733; Gold — CMO Asia Awards</span>
+    </div>
+  </div>
+</section>
+
+<!-- WORK SECTION -->
+<section class="section" id="work">
+  <div class="section-header">
+    <h2 class="section-title">Selected work</h2>
+    <span class="section-meta" id="workCount"></span>
+  </div>
+
+  <div class="filter-row">
+    <button class="filter-btn active" onclick="filterWork('all',this)">All</button>
+    <button class="filter-btn" onclick="filterWork('poster',this)">Posters</button>
+    <button class="filter-btn" onclick="filterWork('print',this)">Print ads</button>
+    <button class="filter-btn" onclick="filterWork('digital',this)">Digital</button>
+    <button class="filter-btn" onclick="filterWork('tv',this)">TV / Video</button>
+    <button class="filter-btn" onclick="filterWork('social',this)">Social</button>
+    <button class="filter-btn" onclick="filterWork('strategy',this)">Strategy</button>
+  </div>
+
+  <div class="work-grid" id="workGrid">
+
+    <!-- ============================================================
+         WORK ITEMS — HOW TO ADD YOUR OWN IMAGES:
+         1. For each item, change the <img src="..."> to point to
+            your actual image file, e.g. src="images/tiara.jpg"
+            OR paste a hosted image URL.
+         2. To add a new item: copy any block below and paste it
+            before the "Add new work" button card at the bottom.
+         3. Update data-type (poster/print/digital/tv/social/strategy)
+            to make the filter tabs work.
+         ============================================================ -->
+
+    <div class="work-item" data-type="poster" data-index="0"
+         data-brand="Bank of Baroda — BOBCARD"
+         data-title="Tiara Launch — Poster Series"
+         data-desc="Premium launch poster series for BOBCARD Tiara. Repositioning BoB Credit Cards into aspirational brand territory with confident, high-impact copy and a rich visual identity."
+         onclick="openLightbox(0)">
+      <button class="work-delete" onclick="deleteWorkItem(event,this)" title="Remove">&#215;</button>
+      <div class="work-media">
+        <!-- REPLACE src below with your actual poster image -->
+        <img src="https://placehold.co/600x800/c0531e/faf7f4?text=Tiara+Poster" alt="Tiara campaign poster"/>
+        <span class="media-type-badge">Poster</span>
+        <div class="work-overlay"><span class="work-overlay-text">View full size &#8599;</span></div>
+      </div>
+      <div class="work-footer">
+        <p class="work-brand">BOBCARD</p>
+        <h3 class="work-title">Tiara Launch — Poster Series</h3>
+        <div class="work-tags"><span class="tag">Poster</span><span class="tag">BFSI</span><span class="tag">Premium</span></div>
+      </div>
+    </div>
+
+    <div class="work-item" data-type="print" data-index="1"
+         data-brand="Policybazaar — Scarecrow M&C Saatchi"
+         data-title="CMO Asia Gold — Print Campaign"
+         data-desc="Award-winning print campaign for Policybazaar. Brand narrative developed for India and UAE markets, cutting through a low-engagement category with high-impact storytelling."
+         onclick="openLightbox(1)">
+      <button class="work-delete" onclick="deleteWorkItem(event,this)" title="Remove">&#215;</button>
+      <div class="work-media">
+        <!-- REPLACE src below with your actual print ad image -->
+        <img src="https://placehold.co/700x500/2a2018/f7f3ee?text=Policybazaar+Print+Ad" alt="Policybazaar print ad"/>
+        <span class="media-type-badge">Print</span>
+        <div class="work-overlay"><span class="work-overlay-text">View full size &#8599;</span></div>
+      </div>
+      <div class="work-footer">
+        <p class="work-brand">Policybazaar</p>
+        <h3 class="work-title">CMO Asia Gold — Print Campaign</h3>
+        <div class="work-tags"><span class="tag">Print</span><span class="tag">Award-winning</span><span class="tag">Multi-market</span></div>
+      </div>
+    </div>
+
+    <div class="work-item" data-type="tv" data-index="2"
+         data-brand="Nickelodeon / Viacom18"
+         data-title="Nickelodeon Brand TVC"
+         data-desc="TV campaign for Nickelodeon India — playful, high-energy storytelling that speaks to kids while earning parents' trust. Developed copy and creative direction."
+         data-video="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+         onclick="openLightbox(2)">
+      <button class="work-delete" onclick="deleteWorkItem(event,this)" title="Remove">&#215;</button>
+      <div class="work-media">
+        <!-- REPLACE with a thumbnail image when available, or leave as video placeholder -->
+        <div class="work-media-placeholder">
+          <div class="play-icon">
+            <svg width="14" height="16" viewBox="0 0 14 16" fill="none"><path d="M1 1l12 7-12 7V1z" fill="#fff"/></svg>
+          </div>
+          <span style="font-size:12px;color:var(--ink3);">Play TVC</span>
+        </div>
+        <span class="media-type-badge">TV</span>
+        <div class="work-overlay"><span class="work-overlay-text">Play video &#8599;</span></div>
+      </div>
+      <div class="work-footer">
+        <p class="work-brand">Nickelodeon / Viacom18</p>
+        <h3 class="work-title">Brand TVC</h3>
+        <div class="work-tags"><span class="tag">TV</span><span class="tag">Entertainment</span><span class="tag">Kids</span></div>
+      </div>
+    </div>
+
+    <div class="work-item" data-type="social" data-index="3"
+         data-brand="BOBCARD Etihad — Bank of Baroda"
+         data-title="Instagram Influencer Activation"
+         data-desc="&#8377;10L Instagram Reels and Stories campaign for BOBCARD Etihad co-branded travel card. Influencer strategy, creative brief, and content direction for a premium travel-focused audience."
+         onclick="openLightbox(3)">
+      <button class="work-delete" onclick="deleteWorkItem(event,this)" title="Remove">&#215;</button>
+      <div class="work-media">
+        <!-- REPLACE src below with your social campaign visual -->
+        <img src="https://placehold.co/500x500/b83060/fdf8f9?text=Etihad+Social" alt="BOBCARD Etihad social campaign"/>
+        <span class="media-type-badge">Social</span>
+        <div class="work-overlay"><span class="work-overlay-text">View full size &#8599;</span></div>
+      </div>
+      <div class="work-footer">
+        <p class="work-brand">BOBCARD Etihad</p>
+        <h3 class="work-title">Instagram Influencer Activation</h3>
+        <div class="work-tags"><span class="tag">Social</span><span class="tag">Influencer</span><span class="tag">BFSI</span></div>
+      </div>
+    </div>
+
+    <div class="work-item" data-type="strategy" data-index="4"
+         data-brand="Intelegencia"
+         data-title="Content Strategy 2026–27"
+         data-desc="CEO-facing content strategy document repositioning Intelegencia's marketing for a two-year growth horizon. Commercially framed, built for leadership readership with a content-led SEO approach."
+         onclick="openLightbox(4)">
+      <button class="work-delete" onclick="deleteWorkItem(event,this)" title="Remove">&#215;</button>
+      <div class="work-media">
+        <!-- REPLACE src below with a screenshot or cover of your strategy doc -->
+        <img src="https://placehold.co/600x420/3a7a42/f8faf6?text=Content+Strategy+Doc" alt="Content strategy document"/>
+        <span class="media-type-badge">Strategy</span>
+        <div class="work-overlay"><span class="work-overlay-text">View full size &#8599;</span></div>
+      </div>
+      <div class="work-footer">
+        <p class="work-brand">Intelegencia</p>
+        <h3 class="work-title">Content Strategy 2026–27</h3>
+        <div class="work-tags"><span class="tag">Strategy</span><span class="tag">Content</span><span class="tag">B2B</span></div>
+      </div>
+    </div>
+
+    <div class="work-item" data-type="digital" data-index="5"
+         data-brand="Valvoline — Leo Burnett"
+         data-title="Digital Campaign — Engine Oil"
+         data-desc="Digital campaign creative for Valvoline Engine Oil. Led copy team across the retained account, delivering consistent brand performance and contributing to two-year client retention."
+         onclick="openLightbox(5)">
+      <button class="work-delete" onclick="deleteWorkItem(event,this)" title="Remove">&#215;</button>
+      <div class="work-media">
+        <!-- REPLACE src below with your Valvoline creative -->
+        <img src="https://placehold.co/600x380/2d5be3/f8f9fb?text=Valvoline+Digital" alt="Valvoline digital campaign"/>
+        <span class="media-type-badge">Digital</span>
+        <div class="work-overlay"><span class="work-overlay-text">View full size &#8599;</span></div>
+      </div>
+      <div class="work-footer">
+        <p class="work-brand">Valvoline — Leo Burnett</p>
+        <h3 class="work-title">Digital Campaign — Engine Oil</h3>
+        <div class="work-tags"><span class="tag">Digital</span><span class="tag">Consumer</span></div>
+      </div>
+    </div>
+
+    <!-- ADD NEW WORK BUTTON — always stays last -->
+    <button class="work-add-card" onclick="openAddModal()" id="addCard">
+      <span class="add-icon">+</span>
+      <span class="add-label">Add new work</span>
+    </button>
+
+  </div>
+</section>
+
+<!-- WHAT I DO -->
+<section class="section">
+  <div class="section-header">
+    <h2 class="section-title">What I do</h2>
+  </div>
+  <div class="expertise-grid">
+    <div class="expertise-cell">
+      <div class="expertise-num">01</div>
+      <p class="expertise-label">Brand transformation</p>
+      <p class="expertise-desc">Repositioning brands with narrative and creative strategy that shifts perception</p>
+    </div>
+    <div class="expertise-cell">
+      <div class="expertise-num">02</div>
+      <p class="expertise-label">Integrated campaigns</p>
+      <p class="expertise-desc">Cross-channel thinking — TV, print, social, digital, influencer, OOH</p>
+    </div>
+    <div class="expertise-cell">
+      <div class="expertise-num">03</div>
+      <p class="expertise-label">Performance storytelling</p>
+      <p class="expertise-desc">Copy and content that works hard commercially — not just creatively</p>
+    </div>
+    <div class="expertise-cell">
+      <div class="expertise-num">04</div>
+      <p class="expertise-label">Team &amp; agency leadership</p>
+      <p class="expertise-desc">Managing creative teams, agency partners, and C-suite stakeholders</p>
+    </div>
+  </div>
+</section>
+
+<!-- CAREER -->
+<section class="section" id="about">
+  <div class="section-header">
+    <h2 class="section-title">Career</h2>
+  </div>
+  <div class="timeline">
+    <div class="timeline-item">
+      <span class="timeline-year">2022 — present</span>
+      <div>
+        <p class="timeline-role">Head, MARCOM</p>
+        <p class="timeline-company">Intelegencia, Noida</p>
+        <p class="timeline-detail">Led MARCOM for Bank of Baroda, VivaLing, FIITJEE, and eOutlet. Drove BoB Credit Cards repositioning to premium brand storytelling — 40% uplift in brand perception. Scaled AI-enabled content operations using generative tools across client accounts.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">2021 — 2022</span>
+      <div>
+        <p class="timeline-role">Copy Group Head</p>
+        <p class="timeline-company">Scarecrow M&amp;C Saatchi, Mumbai</p>
+        <p class="timeline-detail">Led creative copy for Policybazaar (India &amp; UAE), Nickelodeon, and Sonic (Viacom18). New business pitches and integrated brand narratives across retained accounts.</p>
+        <p class="timeline-award">&#9733; Gold — CMO Asia Awards, Policybazaar campaign</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">2019 — 2021</span>
+      <div>
+        <p class="timeline-role">Lead Copywriter</p>
+        <p class="timeline-company">Leo Burnett, Gurugram</p>
+        <p class="timeline-detail">Led copy teams for Valvoline Engine Oil and Philip Morris International. Contributed to client retention and new business growth across retained accounts.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">2016 — 2019</span>
+      <div>
+        <p class="timeline-role">Creative Associate → Copy Supervisor</p>
+        <p class="timeline-company">Rediffusion, Mumbai &amp; Delhi</p>
+        <p class="timeline-detail">Progressed through the creative ranks, contributing to new business across Delhi and Mumbai. Clients: GPI, L&amp;T Realty, Everest Industries, Tata Trusts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="section">
+  <div class="section-header">
+    <h2 class="section-title">Education</h2>
+  </div>
+  <div class="edu-grid">
+    <div class="edu-cell">
+      <p class="edu-degree">PG Diploma — Advertising &amp; Marketing Communication</p>
+      <p class="edu-school">Apeejay Institute of Mass Communication, Delhi</p>
+    </div>
+    <div class="edu-cell">
+      <p class="edu-degree">BBA</p>
+      <p class="edu-school">IMS Noida</p>
+    </div>
+    <div class="edu-cell">
+      <p class="edu-degree">Diploma in Radio Broadcasting</p>
+      <p class="edu-school">Salaam Namaste 90.4, Noida</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="contact-block">
+    <h2 class="contact-heading">Let's talk.</h2>
+    <div class="contact-links">
+      <a class="contact-link" href="mailto:ajajit90@gmail.com">ajajit90@gmail.com</a>
+      <a class="contact-link" href="tel:+919910911392">+91 99109 11392</a>
+      <!-- Replace # with your LinkedIn profile URL -->
+      <a class="contact-link" href="#" target="_blank" rel="noopener">LinkedIn &#8599;</a>
+      <!-- Replace # with your Google Drive CV PDF link -->
+      <a class="contact-link" href="#" target="_blank" rel="noopener">Download CV &#8599;</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>&#169; 2026 Ajit Kumar</span>
+  <span>Greater Noida, Uttar Pradesh</span>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+  <button class="lightbox-nav lightbox-prev" onclick="shiftLightbox(-1)">&#8592;</button>
+  <button class="lightbox-nav lightbox-next" onclick="shiftLightbox(1)">&#8594;</button>
+  <div class="lightbox-media" id="lightboxMedia"></div>
+  <div class="lightbox-info">
+    <p class="lightbox-brand" id="lightboxBrand"></p>
+    <h2 class="lightbox-title" id="lightboxTitle"></h2>
+    <p class="lightbox-desc" id="lightboxDesc"></p>
+  </div>
+</div>
+
+<!-- ADD WORK MODAL -->
+<div class="modal-backdrop" id="addModal" onclick="closeAddOnBackdrop(event)">
+  <div class="modal">
+    <h2 class="modal-title">Add new work</h2>
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Client / Brand</label>
+        <input class="form-input" id="fBrand" type="text" placeholder="e.g. Bank of Baroda"/>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Type</label>
+        <select class="form-select" id="fType">
+          <option value="poster">Poster</option>
+          <option value="print">Print ad</option>
+          <option value="digital">Digital</option>
+          <option value="tv">TV / Video</option>
+          <option value="social">Social</option>
+          <option value="strategy">Strategy</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Project title</label>
+      <input class="form-input" id="fTitle" type="text" placeholder="e.g. Tiara Launch — Poster Series"/>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Description</label>
+      <textarea class="form-textarea" id="fDesc" placeholder="Brief description of the work and your role..."></textarea>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Image URL <span style="font-weight:300;text-transform:none;letter-spacing:0;">(paste a direct hosted link)</span></label>
+      <input class="form-input" id="fImg" type="url" placeholder="https://..."/>
+      <p class="form-hint">Upload to Google Drive, Imgur, or Cloudinary — get a direct image link and paste here.</p>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Video embed URL <span style="font-weight:300;text-transform:none;letter-spacing:0;">(optional)</span></label>
+      <input class="form-input" id="fVideo" type="url" placeholder="https://www.youtube.com/embed/VIDEO_ID"/>
+      <p class="form-hint">YouTube: Share &#8594; Embed &#8594; copy only the src="..." URL.</p>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-ghost" onclick="closeAddModal()">Cancel</button>
+      <button class="btn-primary" onclick="addWorkItem()">Add to portfolio</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Theme & font
+function setTheme(t){
+  document.documentElement.setAttribute('data-theme',t);
+  document.querySelectorAll('.swatch').forEach(s=>s.classList.toggle('active',s.dataset.t===t));
+  localStorage.setItem('ak-theme',t);
+}
+function setFont(f){
+  document.documentElement.setAttribute('data-font',f);
+  document.querySelectorAll('.font-option').forEach(o=>o.classList.toggle('active',o.dataset.f===f));
+  localStorage.setItem('ak-font',f);
+}
+function togglePanel(){
+  document.getElementById('customisePanel').classList.toggle('open');
+  document.getElementById('panelBackdrop').classList.toggle('open');
+}
+(function(){
+  var t=localStorage.getItem('ak-theme'); if(t) setTheme(t);
+  var f=localStorage.getItem('ak-font');  if(f) setFont(f);
+})();
+
+// Filter
+function filterWork(type,btn){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.work-item').forEach(function(el){
+    el.dataset.hidden=(type!=='all'&&el.dataset.type!==type)?'true':'false';
+  });
+  updateCount();
+}
+function updateCount(){
+  var v=document.querySelectorAll('.work-item:not([data-hidden="true"])').length;
+  document.getElementById('workCount').textContent=v+' project'+(v!==1?'s':'');
+}
+updateCount();
+
+// Lightbox
+var currentIdx=0;
+function getVisibleItems(){return Array.from(document.querySelectorAll('.work-item:not([data-hidden="true"])'));}
+function openLightbox(dataIndex){
+  var items=Array.from(document.querySelectorAll('.work-item'));
+  var item=items.find(function(el){return +el.dataset.index===dataIndex;});
+  if(!item) return;
+  var visible=getVisibleItems();
+  currentIdx=visible.indexOf(item);
+  renderLightbox(item);
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function renderLightbox(item){
+  var video=item.dataset.video;
+  var img=item.querySelector('img');
+  var mediaEl=document.getElementById('lightboxMedia');
+  if(video&&video.indexOf('embed')>-1){
+    mediaEl.innerHTML='<iframe src="'+video+'" allowfullscreen></iframe>';
+  } else if(img){
+    mediaEl.innerHTML='<img src="'+img.src+'" alt=""/>';
+  } else {
+    mediaEl.innerHTML='<div style="color:#fff;font-size:14px;opacity:0.4;">No media</div>';
+  }
+  document.getElementById('lightboxBrand').textContent=item.dataset.brand||'';
+  document.getElementById('lightboxTitle').textContent=item.dataset.title||'';
+  document.getElementById('lightboxDesc').textContent=item.dataset.desc||'';
+}
+function shiftLightbox(dir){
+  var visible=getVisibleItems();
+  currentIdx=(currentIdx+dir+visible.length)%visible.length;
+  renderLightbox(visible[currentIdx]);
+}
+function closeLightbox(){
+  document.getElementById('lightboxMedia').innerHTML='';
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',function(e){
+  if(document.getElementById('lightbox').classList.contains('open')){
+    if(e.key==='Escape') closeLightbox();
+    if(e.key==='ArrowLeft') shiftLightbox(-1);
+    if(e.key==='ArrowRight') shiftLightbox(1);
+  }
+});
+
+// Add work modal
+function openAddModal(){
+  document.getElementById('addModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeAddModal(){
+  document.getElementById('addModal').classList.remove('open');
+  document.body.style.overflow='';
+}
+function closeAddOnBackdrop(e){if(e.target===e.currentTarget) closeAddModal();}
+
+function addWorkItem(){
+  var brand=document.getElementById('fBrand').value.trim();
+  var type=document.getElementById('fType').value;
+  var title=document.getElementById('fTitle').value.trim();
+  var desc=document.getElementById('fDesc').value.trim();
+  var img=document.getElementById('fImg').value.trim();
+  var video=document.getElementById('fVideo').value.trim();
+  if(!title){alert('Please add a project title.');return;}
+  var grid=document.getElementById('workGrid');
+  var addCard=document.getElementById('addCard');
+  var idx=document.querySelectorAll('.work-item').length;
+  var div=document.createElement('div');
+  div.className='work-item';
+  div.dataset.type=type;
+  div.dataset.index=idx;
+  div.dataset.brand=brand;
+  div.dataset.title=title;
+  div.dataset.desc=desc;
+  if(video) div.dataset.video=video;
+  div.addEventListener('click',function(){openLightbox(idx);});
+  var mediaHTML='';
+  if(img){
+    mediaHTML='<img src="'+img+'" alt="'+title+'"/>';
+  } else if(video){
+    mediaHTML='<div class="work-media-placeholder"><div class="play-icon"><svg width="14" height="16" viewBox="0 0 14 16" fill="none"><path d="M1 1l12 7-12 7V1z" fill="#fff"/></svg></div><span style="font-size:12px;color:var(--ink3);">Video</span></div>';
+  } else {
+    mediaHTML='<div class="work-media-placeholder"><span style="font-size:12px;color:var(--ink3);">'+type+'</span></div>';
+  }
+  div.innerHTML='<button class="work-delete" onclick="deleteWorkItem(event,this)" title="Remove">&#215;</button>'
+    +'<div class="work-media">'+mediaHTML
+    +'<span class="media-type-badge">'+type+'</span>'
+    +'<div class="work-overlay"><span class="work-overlay-text">View full size &#8599;</span></div></div>'
+    +'<div class="work-footer"><p class="work-brand">'+(brand||type)+'</p>'
+    +'<h3 class="work-title">'+title+'</h3>'
+    +'<div class="work-tags"><span class="tag">'+type+'</span></div></div>';
+  grid.insertBefore(div,addCard);
+  updateCount();
+  closeAddModal();
+  ['fBrand','fTitle','fDesc','fImg','fVideo'].forEach(function(id){document.getElementById(id).value='';});
+}
+
+// Delete
+function deleteWorkItem(e,btn){
+  e.stopPropagation();
+  if(!confirm('Remove this work item?')) return;
+  btn.closest('.work-item').remove();
+  updateCount();
+}
+</script>
+</body>
+</html>
